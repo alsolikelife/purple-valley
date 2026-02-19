@@ -224,10 +224,10 @@ function endVG2(){
   clearInterval(vg2TI);vg2TI=null;
   const pct=updateVG2Score();
   let g,cr,fb;
-  if(pct>=95){g=2;cr=-1;fb={emoji:'🤘',text:'PERFECT SHOCKER!',detail:'Match: '+pct+'%. The entire quad can see it. Campus Security took a photo before making you take it down. Legend status: achieved. Your grades? Not so much.'}}
-  else if(pct>=80){g=4;cr=0;fb={emoji:'🎄',text:'Recognizable gesture.',detail:'Match: '+pct+'%. It is clearly a hand doing... something. Your entrymates are proud. The RA pretends not to see it. You spent the evening on this instead of studying.'}}
-  else if(pct>=60){g=8;cr=2;fb={emoji:'💡',text:'Abstract light art.',detail:'Match: '+pct+'%. It looks more like a Christmas cactus than a hand. You gave up early and went back to studying. Smart move.'}}
-  else{g=3;cr=0;fb={emoji:'🔌',text:'Electrical disaster.',detail:'Match: '+pct+'%. You blew a fuse in Williams Hall. The RA is writing you up. The lights are confiscated.'}}
+  if(pct>=95){g=4;cr=0;fb={emoji:'🤘',text:'PERFECT SHOCKER!',detail:'Match: '+pct+'%. The entire quad can see it. Campus Security took a photo before making you take it down. Legend status: achieved. Your grades? Not so much.'}}
+  else if(pct>=80){g=8;cr=1;fb={emoji:'🎄',text:'Recognizable gesture.',detail:'Match: '+pct+'%. It is clearly a hand doing... something. Your entrymates are proud. The RA pretends not to see it. You spent the evening on this instead of studying.'}}
+  else if(pct>=60){g=9;cr=2;fb={emoji:'💡',text:'Abstract light art.',detail:'Match: '+pct+'%. It looks more like a Christmas cactus than a hand. You gave up early and went back to studying. Smart move.'}}
+  else{g=6;cr=1;fb={emoji:'🔌',text:'Electrical disaster.',detail:'Match: '+pct+'%. You blew a fuse in Williams Hall. The RA is writing you up. The lights are confiscated.'}}
   ST.grades.push(g);ST.courses+=cr;ST.scourses+=cr;ST.en=Math.max(0,ST.en-4);ST.so=Math.min(100,ST.so+5);updHUD();
   if(chkFail())return;showFB(fb,{energy:-4,social:5,grade:g,courses:cr});
 }
